@@ -1,6 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
+    <title>Practicing with the doppler effect</title>
     <style>
       #box {
         background-color: #000;
@@ -11,13 +13,17 @@
         margin-right: auto;
       }
     </style>
+
   </head>
+
   <body>
     <div id="box"></div>
-    <script src="doppler.js"></script>
+    
+    <script src="{{ url_for('static', filename='doppler.js') }}"></script>
     <script>
       window.addEventListener('load', function() {
         window.doppler.init(function(bandwidth) {
+          console.log(bandwidth);
           var threshold = 4;
           if (bandwidth.left > threshold || bandwidth.right > threshold) {
             var scale    = 10;
