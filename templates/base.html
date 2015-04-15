@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block head %}
+      <title>{% block title %}{% endblock %}</title>
+      {% block css %}
+      {% endblock %}
+    {% endblock %}
+    <link rel="shortcut icon" 
+    	href="{{ url_for('static', filename='favicon.ico') }}">
+  </head>
+
+  {% block body %}
+    {% block javascript %}
+    <!--<script type="text/javascript" 
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>-->
+    {% endblock %}
+  {% endblock %}
+</html>

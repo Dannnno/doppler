@@ -1,0 +1,47 @@
+#board {
+	background-color: #212121;
+	border-radius: 5pt;
+}
+
+#reset {
+	border-radius: 5pt;
+	position: relative;
+	background-color: #BBB;
+	height: 25pt;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 20pt;
+}
+
+#score {
+	border-radius: 5pt;
+	position: relative;
+	background-color: #0CF;
+	height: 25pt;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 20pt;
+}
+
+.box {
+	border-radius: 10pt;
+	position: relative;
+	background-color: #CCCCCC;
+	margin-right: 5pt;
+	margin-left: 5pt;
+	margin-top: 5pt;
+	margin-bottom: 5pt;
+	width: 90pt;
+	height: 90pt;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.pbox {
+	text-align: center;
+	vertical-align: middle;
+	font-size: 30pt;
+	position: absolute;
+	display: table-cell; 
+	padding: 0 45px;
+}

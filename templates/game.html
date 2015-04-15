@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}2048 Doppler game{% endblock %}
+{% block css %}
+   <link type='text/css' rel='stylesheet' 
+         href="{{ url_for('static', filename='game.css') }}" />
+{% endblock %}
+
+{% block body %}
+<body id="game">
+
+	<center>
+	    <table id='board' >
+	      <tr>
+	      	<td colspan=2><div id='reset'>Reset Game</div></td>
+			<td colspan=2><div id='score'>0</div></td>
+		  </tr>
+	      {% for i in range(4) %}
+  	      <tr>
+          {% for j in range(4) %}
+          <td>
+              <div class='box' id="{{ 'box{}{}'.format(i, j) }}">
+                  <p class='pbox' id="{{ 'boxp{}{}'.format(i, j) }}"/>
+              </div>
+          </td>
+          {% endfor %}
+          </tr>
+	      {% endfor %}
+        </table>
+	</center>
+
+	{% block javascript %}
+	{{ super() }}
+	{% for file_ in js_files %}
+    <script type='text/javascript' 
+            src="{{ url_for('static', filename=file_) }}"></script>
+    {% endfor %}
+	{% endblock %}
+{% endblock %}
+</html>
