@@ -1,7 +1,13 @@
 var board = board || new GameBoard();
-document.getElementById('reset').onclick = function() {board.reset();}
+
+document.getElementById('reset').onclick = function GAME_reset() {
+  board.reset();
+}
+
 var gameWindow = document.getElementById("game");
+
 gameWindow.onkeydown = function(e) {
+    console.log('keydown');
     e = e || window.event;
     switch (e.keyCode) {
       case 37:
@@ -15,5 +21,6 @@ gameWindow.onkeydown = function(e) {
         break;
       case 40:
         board.move('down');
+        break;
     }
 };
